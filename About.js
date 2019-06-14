@@ -5,36 +5,30 @@ class Login extends Component {
     static navigationOptions = {
         header: null
     }
-    constructor(props) {
-      super(props);
-      this.state = {username: '',password: '',};
-  }
-  Login= () =>{
-    if(this.state.username == 'widya' && this.state.password == '123'){
-      this.props.navigation.navigate('Usia')
-    }else{
-      Alert.alert('Masukan username dan password dengan benar!');
-    }
-  }
     render() {
         return (
           <View style={styles.containerMain}>
             <View style={styles.box2}>
               <View>
-                <Image source={require("./img/300476.jpg")} style={styles.image} />
-              </View>              
+                <Image source={require("./img/me.jpg")} style={styles.image} />
+              </View>
             </View>
-            <Text style={styles.Text2}>by orang</Text>            
+            <Text style={styles.Text2}>by Herry Vipassana Sanjaya</Text>
             <Text style={styles.Judul}>Ding!</Text>
             <Text style={styles.Text}>Absen Mahasiswa</Text>
             <View style={styles.box1}>
-              <Text style={styles.buttonText}>paragraf disini!</Text>
-            </View>   
-            <TouchableHighlight activeOpacity={0.5} style={styles.button2Style} onPress={() => this.Login()}>
+              <Text style={styles.buttonText}>Aplikasi Ding! Absen Mahasiswa
+                merupakan aplikasi untuk memudahkan
+                melakukan absensi mahasiswa.
+                Dengan cara mendaftarkan nama-nama
+                mahasiswa terlebih dahulu. Lalu gunakan
+                QR Scanner untuk melakukan absensi.</Text>
+            </View>
+            <TouchableHighlight activeOpacity={0.5} style={styles.button2Style}>
               <Text style={styles.buttonText}>Kembali</Text>
-            </TouchableHighlight>           
+            </TouchableHighlight>
           </View>
-          
+
         );
     }
 }
@@ -165,7 +159,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingLeft: 100,
     paddingRight: 100,
-    paddingBottom: 10, 
+    paddingBottom: 10,
     paddingTop: 10,
 },
 textHeader: {
