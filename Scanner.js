@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {View,Text,StyleSheet,Image,TouchableHighlight,TextInput, Alert} from "react-native";
-
 class Login extends Component {
     static navigationOptions = {
         header: null
@@ -9,16 +8,17 @@ class Login extends Component {
     render() {
         return (
           <View style={styles.containerMain}>
-            <TouchableHighlight activeOpacity={0.5} style={styles.button3Style} onPress={() => this.Login()}>
+            <TouchableHighlight activeOpacity={0.5} style={styles.button3Style} onPress={() => this.props.navigation.navigate('Home')}>
               <Text style={styles.buttonText2}>Kembali</Text>
             </TouchableHighlight>
             <View style={styles.box1}>
               <Text style={styles.Text}>Absen Scanner</Text>
-            </View>
-            
+            </View>            
             <TouchableHighlight activeOpacity={0.5} style={styles.button2Style}>
               <Text style={styles.buttonText}>Ready!</Text>
             </TouchableHighlight>
+            <View style={styles.white}>
+            </View>
           </View>
           
         );
@@ -70,7 +70,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     height: 40,
     width: "100%",
-    marginTop: 10,
     color: "#5E2E62",
     fontSize: 18
   },
@@ -102,9 +101,8 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     justifyContent: 'center',
     backgroundColor: "white",
-    marginTop:80,
-    marginBottom: 20,
-    height: 90,
+    marginTop:40,
+    height: 50,
     width: 200,
     borderRadius: 5
   },
@@ -137,10 +135,20 @@ const styles = StyleSheet.create({
     color: "black",
     fontSize: 12
   },
+  white: {
+    backgroundColor: 'white',
+    marginTop:35,
+    height: 325,
+    width: 325,
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column",
+    borderRadius: 5,
+  },
   box1: {
     backgroundColor: 'white',
     marginTop:35,
-    height: 75,
+    height: 50,
     width: 325,
     justifyContent: "center",
     alignItems: "center",

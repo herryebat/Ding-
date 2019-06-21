@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {View,Text,StyleSheet,Image,TouchableHighlight,TextInput, Alert} from "react-native";
-
 class Login extends Component {
     static navigationOptions = {
         header: null
@@ -12,13 +11,13 @@ class Login extends Component {
             <View style={styles.box1}>
               <Text style={styles.Text}>Selamat Datang Di Ding!</Text>
             </View>
-            <TouchableHighlight activeOpacity={0.5} style={styles.button2Style}>
+            <TouchableHighlight activeOpacity={0.5} style={styles.button2Style} onPress={() => this.props.navigation.navigate('DaftarMhs')}>
               <Text style={styles.buttonText}>Daftar Absen</Text>
             </TouchableHighlight>
-            <TouchableHighlight activeOpacity={0.5} style={styles.button3Style}>
+            <TouchableHighlight activeOpacity={0.5} style={styles.button3Style} onPress={() => this.props.navigation.navigate('Scanner')}>
               <Text style={styles.buttonText}>QR Scanner</Text>
             </TouchableHighlight>
-            <TouchableHighlight activeOpacity={0.5} style={styles.button2Style}>
+            <TouchableHighlight activeOpacity={0.5} style={styles.button2Style} onPress={() => this.props.navigation.navigate('Login')}>
               <Text style={styles.buttonText}>Logout</Text>
             </TouchableHighlight>
           </View>
@@ -32,7 +31,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: "center",
-    backgroundColor: 'lightblue',
+    backgroundColor: 'blue',
   },
   header: {
     backgroundColor: "green",

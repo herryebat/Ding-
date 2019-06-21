@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import {View,Text,StyleSheet,Image,TouchableHighlight,TextInput, Alert} from "react-native";
-
 class Login extends Component {
     static navigationOptions = {
         header: null
@@ -9,7 +8,7 @@ class Login extends Component {
     render() {
         return (
           <View style={styles.containerMain}>
-            <TouchableHighlight activeOpacity={0.5} style={styles.button3Style} onPress={() => this.Login()}>
+            <TouchableHighlight activeOpacity={0.5} style={styles.button3Style} onPress={() => this.props.navigation.navigate('Home')}>
               <Text style={styles.buttonText2}>Kembali</Text>
             </TouchableHighlight>
             <View style={styles.box1}>

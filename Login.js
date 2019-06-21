@@ -10,8 +10,8 @@ class Login extends Component {
       this.state = {username: '',password: '',};
   }
   Login= () =>{
-    if(this.state.username == 'herryebat' && this.state.password == '12345'){
-      this.props.navigation.navigate('Usia')
+    if(this.state.username == 'HerryEbat' && this.state.password == '123'){
+      this.props.navigation.navigate('Home')
     }else{
       Alert.alert('Masukan username dan password dengan benar!');
     }
@@ -19,14 +19,14 @@ class Login extends Component {
     render() {
         return (
           <View style={styles.containerMain}>
-            <TouchableHighlight activeOpacity={0.5} style={styles.button3Style} onPress={() => this.Login()}>
+            <TouchableHighlight activeOpacity={0.5} style={styles.button3Style} onPress={() => this.props.navigation.navigate('About')}>
                     <Text style={styles.buttonText}>?</Text>
                 </TouchableHighlight>
             <View style={styles.box2}>
               <View>
-                <Image source={require("./img/circle.png")} style={styles.image} />
+                <Image source={require("./img/ding.png")} style={styles.image} />
               </View>
-            </View>
+            </View>            
               <Text style={styles.Judul}>Ding!</Text>
               <Text style={styles.Text}>Absen Mahasiswa</Text>
                 <View style={styles.textInput}>
@@ -39,10 +39,10 @@ class Login extends Component {
                     <Text style={styles.buttonText}>Login</Text>
                 </TouchableHighlight>
             <View style={styles.box3}>
-
+                
             </View>
           </View>
-
+          
         );
     }
 }
@@ -67,8 +67,8 @@ const styles = StyleSheet.create({
   },
   image: {
     height: 200,
-    width: 300,
-
+    width: 200,
+    
   },
   Judul: {
     textAlign: "center",
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingLeft: 100,
     paddingRight: 100,
-    paddingBottom: 10,
+    paddingBottom: 10, 
     paddingTop: 10,
 },
 textHeader: {

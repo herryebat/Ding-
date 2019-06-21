@@ -1,34 +1,29 @@
 import React, { Component } from "react";
 import {View,Text,StyleSheet,Image,TouchableHighlight,TextInput, Alert} from "react-native";
 
-class Login extends Component {
+class About extends Component {
     static navigationOptions = {
         header: null
     }
-    render() {
+      render() {
         return (
           <View style={styles.containerMain}>
             <View style={styles.box2}>
               <View>
-                <Image source={require("./img/me.jpg")} style={styles.image} />
-              </View>
+                <Image source={require("./img/sia.jpg")} style={styles.image} />
+              </View>              
             </View>
-            <Text style={styles.Text2}>by Herry Vipassana Sanjaya</Text>
+            <Text style={styles.Text2}>by Herry Vipassana Sanjaya</Text>            
             <Text style={styles.Judul}>Ding!</Text>
             <Text style={styles.Text}>Absen Mahasiswa</Text>
             <View style={styles.box1}>
-              <Text style={styles.buttonText}>Aplikasi Ding! Absen Mahasiswa
-                merupakan aplikasi untuk memudahkan
-                melakukan absensi mahasiswa.
-                Dengan cara mendaftarkan nama-nama
-                mahasiswa terlebih dahulu. Lalu gunakan
-                QR Scanner untuk melakukan absensi.</Text>
-            </View>
-            <TouchableHighlight activeOpacity={0.5} style={styles.button2Style}>
+              <Text style={styles.buttonText}>Aplikasi Ding! merupakan aplikasi untuk melakukan scanning absen mahasiswa.</Text>
+            </View>   
+            <TouchableHighlight activeOpacity={0.5} style={styles.button2Style} onPress={() => this.props.navigation.navigate('Login')}>
               <Text style={styles.buttonText}>Kembali</Text>
-            </TouchableHighlight>
+            </TouchableHighlight>           
           </View>
-
+          
         );
     }
 }
@@ -38,7 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: "center",
-    backgroundColor: 'lightblue',
+    backgroundColor: 'blue',
   },
   headerBar: {
     backgroundColor: "#880E4F",
@@ -122,7 +117,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     height: 40,
     width: "100%",
-    marginTop: 10,
     color: "#FFFFFF",
     fontSize: 18
   },
@@ -159,7 +153,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingLeft: 100,
     paddingRight: 100,
-    paddingBottom: 10,
+    paddingBottom: 10, 
     paddingTop: 10,
 },
 textHeader: {
@@ -179,4 +173,4 @@ textInput: {
     borderRadius: 5,
 },
 });
-export default Login;
+export default About;
